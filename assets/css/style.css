@@ -1,0 +1,58 @@
+body{
+	font-family: arial;
+	font-size: 21px;
+	color: blue;
+	background: #1abc9c;
+}
+#container #header #menu {
+    background: blue;
+    padding: 2px 10px;
+    overflow: hidden;
+}
+
+#container {
+    width: 1100px;
+    margin: 0px auto;
+    height: auto;
+    padding: 10px;
+}
+
+#container #header {
+    margin-top: 20px;
+}
+
+#container #header #menu #user {
+    float: left;
+}
+
+#container #header #menu #user a {
+    color:  white;
+    padding-right: 5px;
+    margin-top:  5px;
+    display:  inline-block;
+    text-decoration:  none;
+}
+
+#container #header #menu #button-keranjang {
+    float:  right;
+    background:  orange;
+    padding:  2px 10px;
+    border-radius:  3px;
+}
+
+#container #header #menu #button-keranjang img {
+    vertical-align: middle;
+}
+
+#container #footer {
+    background:  blue;
+    padding:  10px;
+}
+
+#container #footer p {
+    color:  white;
+    margin:  0px;
+    font-size:  10px;
+    text-align:  right;
+    font-style:  italic;
+}
