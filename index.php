@@ -1,5 +1,6 @@
 <?php 
 	include_once("assets/function/helper.php");
+	$page =isset($_GET['page']) ? $_GET['page'] : false ;
  ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,15 @@
 			</div>
 		</div>
 		<div id="content">
-			
+			<?php 
+				$filename = "$page.php";
+				if (file_exists($filename)) {
+					include_once($filename);
+				}
+				else{
+					echo "File tidak ada dalam system";
+				}
+			 ?>
 		</div>
 		<div id="footer">
 			<p>Copyright Muhammad Ali Wildan</p>

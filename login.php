@@ -14,7 +14,7 @@
 	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="width: 1000px;">
         <form class="form-horizontal" role="form" method="POST" action="/login">
             <div class="row">
                 <div class="col-md-12" style="margin-top: 25px">

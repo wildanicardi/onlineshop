@@ -56,3 +56,13 @@ body{
     text-align:  right;
     font-style:  italic;
 }
+#container #content {
+    padding:  10px 0px;
+    overflow:  hidden;
+}
+.notif{
+    padding: 10px;
+    color: red;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
