@@ -11,10 +11,14 @@
 			background: #2ecc71;
 			font-family: 'Roboto', sans-serif;
 		}
+        .login-form{
+                width: 900px;
+                margin: 10px auto;
+        }
 	</style>
 </head>
 <body>
-	<div class="container" style="width: 1000px;">
+	<div class="login-form" style="bo">
         <form class="form-horizontal" role="form" method="POST" action="/login">
             <div class="row">
                 <div class="col-md-12" style="margin-top: 25px">

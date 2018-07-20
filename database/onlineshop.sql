@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2016 at 05:30 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.5
+-- Generation Time: Jul 20, 2018 at 05:22 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 5.6.36
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `weshop`
+-- Database: `onlineshop`
 --
 
 -- --------------------------------------------------------
@@ -131,9 +133,14 @@ CREATE TABLE `pesanan_detail` (
 CREATE TABLE `user` (
   `user_id` int(10) NOT NULL,
   `level` varchar(30) NOT NULL,
-  `nama` varchar(150) NOT NULL,
+  `nama_depan` varchar(150) NOT NULL,
+  `nama_belakang` varchar(150) NOT NULL,
   `email` varchar(160) NOT NULL,
   `alamat` varchar(400) NOT NULL,
+  `kota` varchar(100) NOT NULL,
+  `provinsi` varchar(100) NOT NULL,
+  `zip` varchar(100) NOT NULL,
+  `jk` varchar(10) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `password` varchar(300) NOT NULL,
   `status` enum('on','off') NOT NULL
@@ -205,36 +212,43 @@ ALTER TABLE `user`
 --
 ALTER TABLE `banner`
   MODIFY `banner_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
   MODIFY `barang_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `kategori_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `konfirmasi_pembayaran`
 --
 ALTER TABLE `konfirmasi_pembayaran`
   MODIFY `konfirmasi_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `kota`
 --
 ALTER TABLE `kota`
   MODIFY `kota_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
   MODIFY `pesanan_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- Constraints for dumped tables
 --
@@ -264,6 +278,7 @@ ALTER TABLE `pesanan`
 ALTER TABLE `pesanan_detail`
   ADD CONSTRAINT `pesanan_detail_ibfk_1` FOREIGN KEY (`pesanan_id`) REFERENCES `pesanan` (`pesanan_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pesanan_detail_ibfk_2` FOREIGN KEY (`barang_id`) REFERENCES `barang` (`barang_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
