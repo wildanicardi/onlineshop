@@ -31,6 +31,7 @@
  		empty($password) || empty($nomerhp)) {
 		header("location: ",BASE_URL."index.php?page=register&notif=require&$dataForm" );
 	}
+	#mengeceke apakah ada sebuah data , jika == 1 maka ada data
 	elseif (mysqli_num_rows($query) == 1) {
 		header("location: ",BASE_URL."index.php?page=register&notif=email&$dataForm" );
 	}

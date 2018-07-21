@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Halaman Login</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.0.0/dist/css/bootstrap.min.css">
-	<style type="text/css">
-		body{
-			color: #fff;
-			background: #2ecc71;
-			font-family: 'Roboto', sans-serif;
-		}
-        .login-form{
-                width: 900px;
-                margin: 10px auto;
-        }
-	</style>
+    <title>Halaman Login </title>
 </head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+<style type="text/css">
+    body{
+        color: #fff;
+        background: #2ecc71;
+        font-family: 'Roboto', sans-serif;
+    }
+    .form-control{
+        height: 40px;
+        box-shadow: none;
+        color: #969fa4;
+    }
+    .form-control:focus{
+        border-color: #5cb85c;
+    }
+    .form-control, .btn{        
+        border-radius: 3px;
+    }
+    .signup-form{
+        width: 412px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    h2{
+        margin: 0 0 15px;
+        position: relative;
+        text-align: center;
+    }
+    .signup-form .btn1{        
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 62px;  
+        min-width: 281px;
+        outline: none !important;
+    }
+</style>
 <body>
-	<div class="login-form" style="bo">
-        <form class="form-horizontal" role="form" method="POST" action="/login">
-            <div class="row">
-                <div class="col-md-12" style="margin-top: 25px">
-                    <h2 style="text-align: center;" >LOGIN</h2>
-                    <hr>
-                </div>
+    <div class="signup-form">
+        <form action="<?php echo BASE_URL."proses_login.php"; ?>" method="POST">
+            <?php 
+            #melakukan pengecekan apakah email dan password yang di masukkan benar
+                $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+                if ($notif == true) {
+                    echo "<div class='notif'> Maaf, email atau password yang anda masukkan salah</div>";
+                 } 
+             ?>
+            <h2>Form  Login</h2>
+            <hr>
+            <div>
+                <label for="email" class="control-label "></label>
+                    <div >  
+                        <input type="text" placeholder="email" id="email"   class="form-control " name="email" >
+                    </div>
             </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="form-group has-danger">
-                        <label class="sr-only" for="email">E-Mail Address</label>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-                            <input type="text" name="email" class="form-control" id="email"
-                                   placeholder="you@example.com" required autofocus>
-                        </div>
+            <div>
+                <label for="password" class="control-label "></label>
+                    <div>   
+                        <input type="password" placeholder="password" id="password" class="form-control" name="password" > 
                     </div>
-                </div>
-               <!--  <div class="col-md-3">
-                    <div class="form-control-feedback">
-                        <span class="text-danger align-middle">
-                            <i class="fa fa-close"></i> Example error message
-                        </span>
+                    <div >  
+                        <button type="button" onclick="show(this)" class="btn">Show</button>
                     </div>
-                </div> -->
             </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="sr-only" for="password">Password</label>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-                            <input type="password" name="password" class="form-control" id="password"
-                                   placeholder="Password" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-control-feedback">
-                        <span class="text-danger align-middle">
-                        <!-- Put password error message here -->    
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6" style="padding-top: .35rem">
-                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                        <label class="form-check-label">
-                            <input class="form-check-input" name="remember"
-                                   type="checkbox" >
-                            <span style="padding-bottom: .15rem">Remember me</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="padding-top: 1rem">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
-                    <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a>
-                </div>
+            <br>
+            <div class="">
+                <button type="submit" class="btn btn1 btn-primary "><a href=""></a>LOGIN</button>
             </div>
         </form>
-		</div>
-		
-	</div>
-		
-		
+    </div>
+    <script type="text/javascript">
+        // #fungsi untuk menshow dan hide password
+        function show(x) {
+            var y = document.getElementById("password");
+            if ( y.type === "password") {
+                y.type = "text";
+            } else {
+                y.type = "password";
+            }
+        }
+    </script>
 </body>
+
 </html>
