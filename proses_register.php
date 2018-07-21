@@ -1,7 +1,9 @@
 <?php 
+	#memanggil file 
 	include_once("assets/function/koneksi.php");
 	include_once("assets/function/helper.php");
 
+	#mengambil data dari form register
 	$level = "customer";
 	$status="on";
 	$nama_depan = $_POST['namadepan'];
@@ -15,11 +17,15 @@
 	$password =$_POST['password'];
 	$nomerhp = $_POST['hp'];
 
+	#mengunset input an password
 	unset($_POST['password']);
+	#mengasignment setiap data post 
 	$dataForm = http_build_query($_POST);
 
+	#mengecek email yang telah terdaftar di database
 	$query = mysqli_query($koneksi, "SELECT * FROM user  WHERE email = '$email'");
 
+	#melakukan input dan pengecekan form 
 	if (empty($nama_depan) || empty($nama_belakang) || empty($email) ||
  		empty($alamat) || empty($kota) || empty($provinsi) || empty($zip) || empty($jk) ||
  		empty($password) || empty($nomerhp)) {

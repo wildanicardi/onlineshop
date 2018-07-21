@@ -44,6 +44,7 @@
 	<div class="signup-form">
 		<form action="<?php echo BASE_URL."proses_register.php"; ?>" method="POST">
 			<?php 
+			#melakukan pengecekan apakah form telah di isi semua
 				$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
 				$namadepan = isset($_GET['namadepan']) ? $_GET['namadepan'] : false;
 				$namabelakang = isset($_GET['namabelakang']) ? $_GET['namabelakang'] : false;
@@ -134,6 +135,7 @@
 		</form>
 	</div>
 	<script type="text/javascript">
+		// #fungsi untuk menshow dan hide password
 		function show(x) {
 		    var y = document.getElementById("password");
 		    if ( y.type === "password") {
