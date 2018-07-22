@@ -19,7 +19,7 @@
 			<div id="menu">
 				<div id="user">
 					<a href="<?php echo BASE_URL."index.php?page=login"; ?>">Login</a>
-					<a href="<?php echo BASE_URL."index.php?page=Register"; ?>">Register</a>
+					<a href="<?php echo BASE_URL."index.php?page=register"; ?>">Register</a>
 				</div>
 				<a href="<?php echo BASE_URL."index.php?page=keranjang"; ?>" id="button-keranjang" >
 				<img src="<?php echo BASE_URL."assets/images/cart.png"; ?>" />

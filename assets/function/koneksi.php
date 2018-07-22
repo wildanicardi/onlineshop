@@ -1,8 +1,9 @@
 <?php 
-	$server = "localhost";
+	$server = "127.0.0.1";
+	$db = "onlineshop";
 	$username = "root";
 	$password = "";
-	$db = "onlineshop";
+	
 
-	$koneksi = mysqli_connect($server , $username,$password,$db) or die("koneksi ke database gagal");
+	$koneksi = mysqli_connect($server,$username,$password,$db) or die("koneksi ke database gagal");
  ?>
