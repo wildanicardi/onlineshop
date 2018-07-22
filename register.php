@@ -53,6 +53,7 @@
 	<div class="signup-form">
 		<form action="proses_register.php" method="POST">
 			<?php 
+<<<<<<< HEAD
 				// $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
 				// $namadepan = isset($_GET['namadepan']) ? $_GET['namadepan'] : false;
 				// $namabelakang = isset($_GET['namabelakang']) ? $_GET['namabelakang'] : false;
@@ -63,6 +64,19 @@
 				// $provinsi = isset($_GET['provinsi']) ? $_GET['provinsi'] : false;
 				// $zip = isset($_GET['zip']) ? $_GET['zip'] : false;
 				// $hp = isset($_GET['hp']) ? $_GET['hp'] : false;
+=======
+			#melakukan pengecekan apakah form telah di isi semua
+				$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+				$namadepan = isset($_GET['namadepan']) ? $_GET['namadepan'] : false;
+				$namabelakang = isset($_GET['namabelakang']) ? $_GET['namabelakang'] : false;
+				$email = isset($_GET['email']) ? $_GET['email'] : false;
+				$alamat = isset($_GET['alamat']) ? $_GET['alamat'] : false;
+				$kota = isset($_GET['kota']) ? $_GET['kota'] : false;
+				$jk = isset($_GET['jk']) ? $_GET['jk'] : false;
+				$provinsi = isset($_GET['provinsi']) ? $_GET['provinsi'] : false;
+				$zip = isset($_GET['zip']) ? $_GET['zip'] : false;
+				$hp = isset($_GET['hp']) ? $_GET['hp'] : false;
+>>>>>>> a9377ec81470d5f3c0ccf74e7ee033fa4da99f77
 
 				// if ($notif == "require") {
 				//  	echo "<div class='notif'> Maaf, anda harus melengkapi form dibawah ini</div>";
@@ -143,6 +157,7 @@
 		</form>
 	</div>
 	<script type="text/javascript">
+<<<<<<< HEAD
 		// function show(x) {
 		//     var y = document.getElementById("password");
 		//     if ( y.type === "password") {
@@ -151,6 +166,17 @@
 		//         y.type = "password";
 		//     }
 		// }
+=======
+		// #fungsi untuk menshow dan hide password
+		function show(x) {
+		    var y = document.getElementById("password");
+		    if ( y.type === "password") {
+		        y.type = "text";
+		    } else {
+		        y.type = "password";
+		    }
+	    }
+>>>>>>> a9377ec81470d5f3c0ccf74e7ee033fa4da99f77
 	</script>
 </body>
 
