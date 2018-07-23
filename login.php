@@ -43,18 +43,18 @@
 <body>
     <?php 
     #user tidak dapat mengklik button login dan register ketika sudah login
-        if ($user_id) {
-            header("Location:" .BASE_URL);
-        }
+        // if ($user_id) {
+        //     header("Location:" .BASE_URL);
+        // }
     ?>
     <div class="signup-form">
-        <form action="<?php echo BASE_URL."proses_login.php"; ?>" method="POST">
+        <form action="proses_login.php" method="POST">
             <?php 
             #melakukan pengecekan apakah email dan password yang di masukkan benar
-                $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
-                if ($notif == true) {
-                    echo "<div class='notif'> Maaf, email atau password yang anda masukkan salah</div>";
-                 } 
+                // $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+                // if ($notif == true) {
+                //     echo "<div class='notif'> Maaf, email atau password yang anda masukkan salah</div>";
+                //  } 
              ?>
             <h2>Form  Login</h2>
             <hr>
@@ -75,20 +75,20 @@
             </div>
             <br>
             <div class="">
-                <button type="submit" class="btn btn1 btn-primary "><a href=""></a>LOGIN</button>
+                <button type="submit" class="btn btn1 btn-primary" name="login">LOGIN</button>
             </div>
         </form>
     </div>
     <script type="text/javascript">
         // #fungsi untuk menshow dan hide password
-        function show(x) {
-            var y = document.getElementById("password");
-            if ( y.type === "password") {
-                y.type = "text";
-            } else {
-                y.type = "password";
-            }
-        }
+        // function show(x) {
+        //     var y = document.getElementById("password");
+        //     if ( y.type === "password") {
+        //         y.type = "text";
+        //     } else {
+        //         y.type = "password";
+        //     }
+        // }
     </script>
 </body>
 

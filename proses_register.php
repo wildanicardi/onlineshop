@@ -3,7 +3,7 @@
 	include_once("assets/function/koneksi.php");
 	include_once("assets/function/helper.php");
 
-<<<<<<< HEAD
+
 	if(isset($_POST['submit'])) {
 		$level = "customer";
 		$status="on";
@@ -37,7 +37,7 @@
 		$passwordHash = md5($password);
 		$query = mysqli_query($koneksi,"INSERT INTO user (level , nama_depan , nama_belakang, email, alamat, kota, provinsi, zip, jk, phone, password, status ) 
 			VALUES('$level', '$nama_depan', '$nama_belakang', '$email', '$alamat', '$kota', '$provinsi', '$zip', '$jk','$nomerhp', '$passwordHash', '$status')");
-=======
+
 	#mengambil data dari form register
 	// if(isset($_POST['submit'])) {
 		$level = "customer";
@@ -74,7 +74,6 @@
 		header("location: ".BASE_URL."index.php?page=register&notif=email&$dataForm" );
 	}
 	else{
-<<<<<<< HEAD
 		$passwordHash = md5($password);
 		$query = mysqli_query($koneksi,"INSERT INTO user (level , nama_depan , nama_belakang, email, alamat, kota, provinsi, zip, jk, phone, password, status ) 
 			VALUES('$level', '$nama_depan', '$nama_belakang', '$email', '$alamat', '$kota', '$provinsi', '$zip', '$jk','$nomerhp', '$passwordHash', '$status')");
@@ -84,24 +83,13 @@
  		if($query) {
 			echo "<script>alert('Berhasil')</script>";
 			header("Location: ".BASE_URL."index.php?page=login" );
-=======
-		$password = md5($password);
-		mysqli_query($koneksi , "INSERT INTO user ( level , nama_depan , nama_belakang, email, alamat, kota, provinsi, zip, jk, password, nomerhp) 
-			VALUES('$level', '$nama_depan', '$nama_belakang', '$email', '$alamat', '$kota', '$provinsi', '$zip', '$jk', '$password', '$nomerhp', '$status')");
->>>>>>> a9377ec81470d5f3c0ccf74e7ee033fa4da99f77
 
 		if($query) {
 			"<script>alert('Berhasil')</script>";
 			header("Location: ",BASE_URL."index.php?page=login" );
->>>>>>> f44325fce336c8470c09575b33059e0c9915c639
 		}
 		else {
 			error_reporting(E_ALL);
 		}
-<<<<<<< HEAD
- 	
-=======
-			
- 	// }
->>>>>>> f44325fce336c8470c09575b33059e0c9915c639
- ?>
+	}
+?>
