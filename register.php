@@ -41,6 +41,12 @@
     }
 </style>
 <body>
+	<?php 
+    #user tidak dapat mengklik button login dan register ketika sudah login
+        if ($user_id) {
+            header("Location:" .BASE_URL);
+        }
+    ?>
 	<div class="signup-form">
 		<form action="<?php echo BASE_URL."proses_register.php"; ?>" method="POST">
 			<?php 
