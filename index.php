@@ -26,6 +26,7 @@
 			</a>
 			<div id="menu">
 				<div id="user">
+<<<<<<< HEAD
 					<?php 
 						if ($user_id) {
 							echo "HI <b> $nama_depan</b>, <a href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>";
@@ -35,6 +36,10 @@
 						echo "<a href='".BASE_URL."index.php?page=Register'>Register</a>";
 						}
 					 ?>
+=======
+					<a href="<?php echo BASE_URL."index.php?page=login"; ?>">Login</a>
+					<a href="<?php echo BASE_URL."index.php?page=register"; ?>">Register</a>
+>>>>>>> f44325fce336c8470c09575b33059e0c9915c639
 				</div>
 				<a href="<?php echo BASE_URL."index.php?page=keranjang"; ?>" id="button-keranjang" >
 				<img src="<?php echo BASE_URL."assets/images/cart.png"; ?>" />
