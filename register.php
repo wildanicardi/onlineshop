@@ -59,6 +59,7 @@
 	<div class="signup-form">
 		<form action="proses_register.php" method="POST">
 			<?php 
+
 			#melakukan pengecekan apakah form telah di isi semua
 				$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
 				$namadepan = isset($_GET['namadepan']) ? $_GET['namadepan'] : false;
@@ -151,6 +152,7 @@
 		</form>
 	</div>
 	<script type="text/javascript">
+
 		function show(x) {
 		    var y = document.getElementById("password");
 		    if ( y.type === "password") {
@@ -159,6 +161,7 @@
 		        y.type = "password";
 		    }
 	    }
+
 	</script>
 </body>
 

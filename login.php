@@ -48,9 +48,10 @@
         }
     ?>
     <div class="signup-form">
-        <form action="<?php echo BASE_URL."proses_login.php"; ?>" method="POST">
+        <form action="proses_login.php" method="POST">
             <?php 
             #melakukan pengecekan apakah email dan password yang di masukkan benar
+
                 $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
                 if ($notif == true) {
                     echo "<div class='notif'><b> Maaf, email atau password yang anda masukkan salah</b></div>";
@@ -75,7 +76,7 @@
             </div>
             <br>
             <div class="">
-                <button type="submit" class="btn btn1 btn-primary "><a href=""></a>LOGIN</button>
+                <button type="submit" class="btn btn1 btn-primary" name="login">LOGIN</button>
             </div>
         </form>
     </div>

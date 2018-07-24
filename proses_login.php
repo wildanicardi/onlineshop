@@ -3,13 +3,17 @@
 	include_once("assets/function/koneksi.php");
 	include_once("assets/function/helper.php");
 
-	$email = $_POST['email'];
-	$password = md5($_POST['password']);
+	if(isset($_POST['login'])) {
+		$email = $_POST['email'];
+		$password = md5($_POST['password']);
+	}
+	
 
 	#mengecek email yang telah terdaftar di database
 	$query = mysqli_query($koneksi, "SELECT * FROM user  WHERE email = '$email' AND password = '$password' AND status='on'");
-
+	$cek = mysqli_num_rows($query);
 	#mengecek apakah ada sebuah data , jika == 0 maka tdk ada data
+
 	if (mysqli_num_rows($query) == 0) {
 		header("location: ".BASE_URL."index.php?page=login&notif=true");
 	}

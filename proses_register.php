@@ -48,11 +48,10 @@
 			echo "<script>alert('Berhasil')</script>";
 			header("Location: ".BASE_URL."index.php?page=login" );
 
-
-
 		}
 		else {
 			error_reporting(E_ALL);
 		}
 
  ?>
+
