@@ -1,3 +1,3 @@
 <?php 
-	define("BASE_URL", "http://localhost:8080/wildanshop/")
+	define("BASE_URL", "http://localhost/onlineshop/")
  ?>

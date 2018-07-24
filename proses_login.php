@@ -11,18 +11,19 @@
 
 	#mengecek apakah ada sebuah data , jika == 0 maka tdk ada data
 	if (mysqli_num_rows($query) == 0) {
-		header("location: ",BASE_URL."index.php?page=register&notif=true");
+		header("location: ".BASE_URL."index.php?page=login&notif=true");
 	}
 	else{
 		#berfungsi untuk melihat data jika user berhasil login
 		$row = mysqli_fetch_assoc($query);
-
 		session_start();
 
 		$_SESSION['user_id'] = $row['user_id'];
 		$_SESSION['email'] = $row['email'];
+		$_SESSION['nama_depan'] = $row['nama_depan'];
+		$_SESSION['nama_belakang'] = $row['nama_belakang'];
 		$_SESSION['level'] = $row['level'];
 
-		header("location" . BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
+		header("location: ".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
 	}
  ?>

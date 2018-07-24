@@ -1,8 +1,8 @@
 body{
-	font-family: arial;
-	font-size: 21px;
-	color: blue;
-	background: #1abc9c;
+    font-family: arial;
+    font-size: 21px;
+    color: blue;
+    background: #1abc9c;
 }
 #container #header #menu {
     background: blue;
@@ -66,4 +66,38 @@ body{
     color: red;
     margin-bottom: 10px;
     font-size: 12px;
+}
+
+#bg-page-profile {
+    overflow:  hidden;
+}
+
+#profile-konten{
+    margin-top: -295px;
+    float: right;
+    width: 835px;
+    padding: 10px;
+}
+#menu-profile{
+    float: left;
+    width: 245px;
+    background: #1e5474;
+}
+#menu-profile ul {
+    margin:  0px;
+    padding:  0px;
+    list-style:  none;
+}
+
+#menu-profile ul li a {
+    display:  block;
+    text-decoration:  none;
+    color: black;
+    padding:  10px 20px;
+}
+
+#menu-profile ul li a:hover,
+#menu-profile ul li a.active 
+{
+    background:  orange;
 }

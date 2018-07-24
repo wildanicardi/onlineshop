@@ -53,7 +53,7 @@
             #melakukan pengecekan apakah email dan password yang di masukkan benar
                 $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
                 if ($notif == true) {
-                    echo "<div class='notif'> Maaf, email atau password yang anda masukkan salah</div>";
+                    echo "<div class='notif'><b> Maaf, email atau password yang anda masukkan salah</b></div>";
                  } 
              ?>
             <h2>Form  Login</h2>
