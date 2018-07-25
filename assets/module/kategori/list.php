@@ -1,8 +1,12 @@
+
 <div id="frame-tambah">
 	<a href="<?php echo BASE_URL. "index.php?page=my_profile&module=kategori&action=form";?> " class="tombol-action">+ Tambah Kategori</a>
 </div>
 
 <?php 
+	include_once("../../function/koneksi.php");
+	include_once("../../function/helper.php");
+
 	#mengecek kategori di dalam database
 	$querykategori = mysqli_query($koneksi, "SELECT * FROM kategori");
 
@@ -20,14 +24,23 @@
 		$no=1;
 
 		while ($row=mysqli_fetch_assoc($querykategori)) {
-			echo "<tr>
-					<td>$no</td>
-					<td>$row['kategori']</td>
-					<td>$row['status']</td>
-					<td>
-						<a class='".BASE_URL.
-						"index.php?page=my_profile&module=kategori&action=form&kategori_id=$row['kategori_id']>EDIT</a> 
-					</td>";
+			// echo "<tr>
+			// 		<td>$no</td>
+			// 		<td>$row['kategori']</td>
+			// 		<td>$row['status']</td>
+			// 		<td>
+			// 			<a class='".BASE_URL.
+			// 			"index.php?page=my_profile&module=kategori&action=form&kategori_id=$row['kategori_id']>EDIT</a> 
+			// 		</td>";
+			echo "<tr>";
+			echo "<td> $no </td>";
+			echo "<td>" {$row['kategori']};"</td>";
+			echo "<td>" {$row['status']}; "</td>";
+			echo "<td>
+					<a href='".BASE_URL.
+						"index.php?page=my_profile&module=kategori&action=form&kategori_id={ row['kategori_id'] };>EDIT</a> 
+			</td>";
+			echo "</tr>";
 		}
 		echo "</table>";
 	}
