@@ -28,6 +28,6 @@
 		$_SESSION['nama_belakang'] = $row['nama_belakang'];
 		$_SESSION['level'] = $row['level'];
 
-		header("location: ".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
+		header("location: ".BASE_URL."index.php?page=my_profile&module=kategori&action=list");
 	}
  ?>

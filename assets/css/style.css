@@ -75,7 +75,7 @@ body{
 #profile-konten{
     margin-top: -295px;
     float: right;
-    width: 835px;
+    width: 844px;
     padding: 10px;
 }
 #menu-profile{
@@ -100,4 +100,55 @@ body{
 #menu-profile ul li a.active 
 {
     background:  orange;
+}
+.tombol-action{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 7px 15px;
+    float: right;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 3px
+}
+.tombol-action:hover{
+    background: orange;
+    text-decoration: none;
+}
+#frame-tambah {
+    margin-bottom:  10px;
+    text-align:  right;
+}
+.table-list {
+    width:  100%;
+    border-collapse:  collapse;
+}
+
+.table-list tr.baris-title {
+    background: #E6E6E6;
+}
+
+.table-list tr th,
+.table-list tr td{
+    padding:  10px 7px;
+}
+
+.kolom-nomor {
+    width:  20px;
+    text-align:  center;
+}
+
+.kiri {
+    text-align:  left;
+}
+
+.tengah {
+    text-align:  center;
+}
+.kanan{
+    text-align:right;
+}
+.control-label {
+    width:  100%;
 }
