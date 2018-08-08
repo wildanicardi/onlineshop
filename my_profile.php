@@ -7,35 +7,41 @@ if (!$user_id)
     $action = isset($_GET['action']) ? $_GET['action'] : false;
     $mode = isset($_GET['mode']) ? $_GET['mode'] : false;
 ?>
-<div id="bg-page-profile">
+
     <div id="menu-profile">
       <ul>
-        <li>
-          <a <?php if ($module == "kategori") {
-            echo "class='active'";
-          } ?> 
-          href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=list";?>">Kategori</a>
-        </li>
-        <li>
-          <a <?php if ($module == "barang") {
-            echo "class='active'";
-          } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=barang&action=list";?>">Barang</a>
-        </li>
-        <li>
-          <a <?php if ($module == "kota") {
-            echo "class='active'";
-          } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=kota&action=list";?>">Kota</a>
-        </li>
-        <li>
-          <a <?php if ($module == "user") {
-            echo "class='active'";
-          } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=user&action=list";?>">User</a>
-        </li>
-        <li>
-          <a <?php if ($module == "banner") {
-            echo "class='active'";
-          } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=banner&action=list";?>">Banner</a>
-        </li>
+          <?php 
+            if ($level == "superadmin") {
+           ?>
+              <li>
+                <a <?php if ($module == "kategori") {
+                  echo "class='active'";
+                } ?> 
+                href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=list";?>">Kategori</a>
+              </li>
+              <li>
+                <a <?php if ($module == "barang") {
+                  echo "class='active'";
+                } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=barang&action=list";?>">Barang</a>
+              </li>
+              <li>
+                <a <?php if ($module == "kota") {
+                  echo "class='active'";
+                } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=kota&action=list";?>">Kota</a>
+              </li>
+              <li>
+                <a <?php if ($module == "user") {
+                  echo "class='active'";
+                } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=user&action=list";?>">User</a>
+              </li>
+              <li>
+                <a <?php if ($module == "banner") {
+                  echo "class='active'";
+                } ?>  href="<?php echo  BASE_URL."index.php?page=my_profile&module=banner&action=list";?>">Banner</a>
+              </li>
+        <?php 
+          }
+         ?>
         <li>
           <a <?php if ($module == "pesanan") {
             echo "class='active'";
@@ -43,7 +49,7 @@ if (!$user_id)
         </li>
       </ul>
     </div>
-</div>
+
 <div id="profile-konten">
   <?php
     $file = "module/$module/$action.php";

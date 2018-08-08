@@ -1,10 +1,10 @@
 <?php
-    include("../../function/koneksi.php");   
-    include("../../function/helper.php");   
+    include_once("../../assets/function/koneksi.php");
+	include_once("../../assets/function/helper.php"); 
      
     $user_id = $_GET['user_id'];
 	
-    $nama = $_POST['nama'];
+    $nama = $_POST["nama"];
 	$email = $_POST["email"];
 	$phone = $_POST["phone"];
 	$alamat = $_POST["alamat"];
@@ -19,5 +19,5 @@
 											   status='$status'
 											   WHERE user_id='$user_id'");
 
-    header("location: ".BASE_URL."index.php?page=my_profile&module=user&action=list");
+    header("location:".BASE_URL."index.php?page=my_profile&module=user&action=list");
 ?>

@@ -62,8 +62,7 @@
 
 			#melakukan pengecekan apakah form telah di isi semua
 				$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
-				$namadepan = isset($_GET['namadepan']) ? $_GET['namadepan'] : false;
-				$namabelakang = isset($_GET['namabelakang']) ? $_GET['namabelakang'] : false;
+				$nama = isset($_GET['nama']) ? $_GET['nama'] : false;
 				$email = isset($_GET['email']) ? $_GET['email'] : false;
 				$alamat = isset($_GET['alamat']) ? $_GET['alamat'] : false;
 				$kota = isset($_GET['kota']) ? $_GET['kota'] : false;
@@ -82,12 +81,10 @@
 			 ?>
 			<h2>Form Register</h2>
 			<hr>
-			<div class="form-row">
-				<div class="form-group col-md-6">
-					<input type="text" placeholder="Nama Depan" value="" name="namadepan" id="namadepan" class="form-control ">
-				</div>
-				<div class="form-group col-md-6">
-					<input type="text" placeholder="Nama Belakang" value="" name="namabelakang" id="namabelakang" class="form-control ">
+			<div class="form-group">
+				<label for="nama" class="control-label "></label>
+				<div>
+					<input type="text" placeholder="nama lengkap" value="" name="nama" id="nama" class="form-control ">
 				</div>
 			</div>
 			<div class="form-group">

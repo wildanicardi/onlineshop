@@ -24,10 +24,14 @@
 
 		$_SESSION['user_id'] = $row['user_id'];
 		$_SESSION['email'] = $row['email'];
-		$_SESSION['nama_depan'] = $row['nama_depan'];
-		$_SESSION['nama_belakang'] = $row['nama_belakang'];
+		$_SESSION['nama'] = $row['nama'];
 		$_SESSION['level'] = $row['level'];
 
-		header("location: ".BASE_URL."index.php?page=my_profile&module=kategori&action=list");
+		if (isset($_SESSION["proses_pesanan"])) {
+			unset($_SESSION["proses_pesanan"]);
+			header("location: ".BASE_URL."index.php?page=data_pemesan");
+		}else{
+			header("location: ".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
+		}
 	}
  ?>

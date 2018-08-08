@@ -1,6 +1,6 @@
 <?php
-    include("../../function/koneksi.php");   
-    include("../../function/helper.php");   
+    include_once("../../assets/function/koneksi.php");
+	include_once("../../assets/function/helper.php");   
      
     $kota = $_POST['kota'];
     $tarif = $_POST['tarif'];

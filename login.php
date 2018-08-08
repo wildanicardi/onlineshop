@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Halaman Login </title>
-</head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.0.0/dist/css/bootstrap.min.css">
 <style type="text/css">
     body{
         color: #fff;
@@ -40,7 +33,7 @@
         outline: none !important;
     }
 </style>
-<body>
+
     <?php 
     #user tidak dapat mengklik button login dan register ketika sudah login
         if ($user_id) {
@@ -91,6 +84,3 @@
             }
         }
     </script>
-</body>
-
-</html>

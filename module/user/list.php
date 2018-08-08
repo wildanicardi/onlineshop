@@ -1,7 +1,7 @@
 <?php
     $no=1;
       
-    $queryAdmin = mysqli_query($koneksi, "SELECT * FROM user ORDER BY nama_depan ASC");
+    $queryAdmin = mysqli_query($koneksi, "SELECT * FROM user ORDER BY nama ASC");
       
     if(!$queryAdmin || mysqli_num_rows($queryAdmin) == 0)
     {
@@ -25,12 +25,12 @@
             {
                 echo "<tr>
                         <td class='kolom-nomor'>$no</td>
-                        <td>$rowUser[nama_depan]</td>
+                        <td>$rowUser[nama]</td>
                         <td>$rowUser[email]</td>
                         <td>$rowUser[phone]</td>
                         <td>$rowUser[level]</td>
                         <td class='tengah'>$rowUser[status]</td>
-                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=user&action=form&user_id=$rowUser[user_id]"."'>Edit</a></td>
+                        <td class='tengah'><a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=user&action=form&user_id=$rowUser[user_id]'>Edit</a></td>
                      </tr>";
               
                 $no++;

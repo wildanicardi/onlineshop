@@ -7,9 +7,7 @@
 	 
 	$row=mysqli_fetch_array($queryUser);
 	  
-	$namadepan = $row["nama_depan"];
-	$nama_belakang = $row["nama_belakang"];
-	$nama = $namadepan." ".$nama_belakang;
+	$nama = $row["nama"];
 	$email = $row["email"];
 	$phone = $row["phone"];
 	$alamat = $row["alamat"];
@@ -19,28 +17,27 @@
 <form action="<?php echo BASE_URL."module/user/action.php?user_id=$user_id"?>" method="POST">
 	  
 	<div class="element-form">
-		<label>Nama Lengkap</label>	
-		<span><input type="text" name="nama" value="<?php echo $nama; ?>" /></span>
-	</div>	
-
+		<label>Nama Depan</label>	
+		<span><input type="text" class="control-label" name="nama" value="<?php echo $nama; ?>" /></span>
+	</div>
 	<div class="element-form">
 		<label>Email</label>	
-		<span><input type="text" name="email" value="<?php echo $email; ?>" /></span>
+		<span><input type="text" class="control-label" name="email" value="<?php echo $email; ?>" /></span>
 	</div>		
 
 	<div class="element-form">
 		<label>Phone</label>	
-		<span><input type="text" name="phone" value="<?php echo $phone; ?>" /></span>
+		<span><input type="text"class="control-label" class="control-label" name="phone" value="<?php echo $phone; ?>" /></span>
 	</div>	
 
 	<div class="element-form">
 		<label>Alamat</label>	
-		<span><input type="text" name="alamat" value="<?php echo $alamat; ?>" /></span>
+		<span><input type="text" class="control-label" name="alamat" value="<?php echo $alamat; ?>" /></span>
 	</div>		
 
 	<div class="element-form">
 		<label>Level</label>	
-		<span>
+		<span class="control-label">
 			<input type="radio" value="superadmin" name="level" <?php if($level == "superadmin"){ echo "checked"; } ?> /> Superadmin
 			<input type="radio" value="customer" name="level" <?php if($level == "customer"){ echo "checked"; } ?> /> Customer			
 		</span>
@@ -48,7 +45,7 @@
 
 	<div class="element-form">
 		<label>Status</label>	
-		<span>
+		<span class="control-label">
 			<input type="radio" value="on" name="status" <?php if($status == "on"){ echo "checked"; } ?> /> on
 			<input type="radio" value="off" name="status" <?php if($status == "off"){ echo "checked"; } ?> /> off		
 		</span>

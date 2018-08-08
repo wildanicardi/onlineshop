@@ -23,17 +23,17 @@
 
 	<div class="element-form">
 		<label>Kota</label>	
-		<span><input type="text" name="kota" value="<?php echo $kota; ?>" /></span>
+		<span><input type="text" class="control-label" name="kota" value="<?php echo $kota; ?>" /></span>
 	</div>		
 
 	<div class="element-form">
 		<label>Tarif</label>	
-		<span><input type="text" name="tarif" value="<?php echo $tarif; ?>" /></span>
+		<span><input type="text" class="control-label" name="tarif" value="<?php echo $tarif; ?>" /></span>
 	</div>		
 
 	<div class="element-form">
 		<label>Status</label>	
-		<span>
+		<spanclass="control-label">
 			<input type="radio" name="status" value="on" <?php if($status == "on"){ echo "checked"; } ?> /> On
 			<input type="radio" name="status" value="off" <?php if($status == "off"){ echo "checked"; } ?> /> Off
 		</span>

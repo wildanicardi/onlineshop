@@ -19,7 +19,7 @@
            
 		$banner = $row["banner"];
 		$link = $row["link"];
-		$gambar = "<img src='". BASE_URL."images/slide/$row[gambar]' style='width: 200px;vertical-align: middle;' />";
+		$gambar = "<img src='".BASE_URL."assets/images/slide/$row[gambar]' style='width: 200px;vertical-align: middle;' />";
 		$keterangan_gambar = "(klik 'Pilih Gambar' hanya jika tidak ingin mengganti gambar)";
 		$status = $row["status"];
     }   
@@ -29,22 +29,22 @@
 	
 	<div class="element-form">
 		<label>Banner</label>	
-		<span><input type="text" name="banner" value="<?php echo $banner; ?>" /></span>
+		<span><input type="text" name="banner" class="control-label" value="<?php echo $banner; ?>" /></span>
 	</div>	
 
 	<div class="element-form">
 		<label>Link</label>	
-		<span><input type="text" name="link" value="<?php echo $link; ?>" /></span>
+		<span><input type="text" name="link" class="control-label" value="<?php echo $link; ?>" /></span>
 	</div>	   
 
 	<div class="element-form">
 		<label>Gambar <?php echo $keterangan_gambar; ?></label>	
-		<span><input type="file" name="file" /><?php echo $gambar; ?></span>
+		<span><input type="file" class="control-label" name="file" /><?php echo $gambar; ?></span>
 	</div>	  
 
 	<div class="element-form">
 		<label>Status</label>	
-		<span>
+		<span class="control-label">
 			<input type="radio" value="on" name="status" <?php if($status == "on"){ echo "checked"; } ?> /> On
 			<input type="radio" value="off" name="status" <?php if($status == "off"){ echo "checked"; } ?> /> Off		
 		</span>

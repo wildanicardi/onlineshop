@@ -1,6 +1,6 @@
 body{
     font-family: arial;
-    font-size: 21px;
+    font-size: 18px;
     color: blue;
     background: #1abc9c;
 }
@@ -73,14 +73,14 @@ body{
 }
 
 #profile-konten{
-    margin-top: -295px;
+    margin-top: 0px;
     float: right;
-    width: 844px;
-    padding: 10px;
+    width: 863px;
+    padding: 8px;
 }
 #menu-profile{
     float: left;
-    width: 245px;
+    width: 225px;
     background: #1e5474;
 }
 #menu-profile ul {
@@ -124,6 +124,9 @@ body{
     width:  100%;
     border-collapse:  collapse;
 }
+.table-list tr{
+    border-bottom: 1px solid #1e5474;
+}
 
 .table-list tr.baris-title {
     background: #E6E6E6;
@@ -151,4 +154,211 @@ body{
 }
 .control-label {
     width:  100%;
+}
+#kiri {
+    width:  245px;
+    height:  auto;
+    float:  left;
+}
+
+#menu-kategori ul {
+    list-style:  none;
+    margin: 0px;
+    padding:  0px;
+}
+
+#menu-kategori ul li {
+    margin-bottom:  5px;
+}
+
+#menu-kategori ul li a {
+    text-decoration:  none;
+    display:  block;
+    padding:  10px;
+    background: white;
+    color:  #1e5474;
+}
+#menu-kategori ul li a:hover,
+#menu-kategori ul li a.active{
+    background:#e8e8e8;
+}
+#kanan {
+    width: 820px;
+    height:  auto;
+    margin-left:  15px;
+    float:  left;
+}
+
+#kanan #frame-barang ul {
+    list-style: none;
+    margin:  0px;
+    padding:  0px;
+    overflow:  hidden;
+}
+
+#kanan #frame-barang ul li {
+    width: 240px;
+    background: white;
+    padding:  10px 15px;
+    margin-bottom:  15px;
+    margin-right:  45px;
+    float: left;
+}
+
+#kanan #frame-barang ul li .price {
+    font-size:  15px;
+    font-weight:  bold;
+    margin-bottom:  10px;
+    text-align:  right;
+}
+
+#kanan #frame-barang ul li a img {
+    display:  block;
+    width:  227px;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar {
+    border-top: 1px solid #E6E6E6;
+    border-bottom:  1px solid #E6E6E6;
+    padding:  10px 0px;
+    height: 78px;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar p {
+    text-align:  center;
+    margin:  5px 0px;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar p a {
+    font-weight:  bold;
+    text-decoration:  none;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar span {
+    display:  block;
+    text-align:  center;
+}
+
+#kanan #frame-barang ul li .button-add-cart {
+    text-align:  center;
+}
+
+#kanan #frame-barang ul li .button-add-cart a {
+    text-decoration:  none;
+    background:  #1e5474;
+    color:  white;
+    padding:  5px 10px;
+    display:  inline-block;
+    margin-top: 22px;
+    border-radius:  3px;
+}
+#kanan #frame-barang ul li .button-add-cart a:hover{
+    background:orange;
+    
+}
+#detail-barang {
+    background:  white;
+    padding:  15px;
+}
+
+#detail-barang h2 {
+    margin-top:  0px;
+}
+
+#detail-barang #frame-barang {
+    background:  #FBFBFB;
+    padding:  20px;
+}
+
+#detail-barang #frame-barang img {
+    display:  block;
+    margin:  0px auto;
+}
+
+#detail-barang #frame-harga {
+    margin:  15px 0px;
+}
+
+#detail-barang #frame-harga span {
+    font-size: 20px;
+    font-weight:  bold;
+    color:  red;
+}
+
+#detail-barang #frame-harga a {
+    background:  #1e5474;
+    color:  white;
+    display:  inline-block;
+    padding:  5px 10px;
+    float:  right;
+    text-decoration:  none;
+    border-radius:  3px;
+}
+#detail-barang #frame-harga a:hover{
+    background:orange;
+}
+
+#detail-barang #keterangan {
+    margin:  20px 0px;
+}
+.total-barang{
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: top;
+}
+.update-quantity {
+    width:  30px;
+    text-align:  center;
+}
+.kanan.hapus {
+    position: relative;
+}
+.kanan.hapus a{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-decoration: none;
+    color: #1e5474;
+
+}
+#frame-button-keranjang a{
+    background: #1e5474;
+    color: white;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin-top: 15px;
+    display: inline-block;
+}
+#lanjut-belanja{
+    float: left;
+}
+#lanjut-pemesanan{
+    float: right;
+}
+#frame-data-pengiriman{
+    float: left;
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 500px;
+}
+#frame-data-detail{
+    width: 550px;
+    float: right;
+
+}
+#frame-detail-order{
+    border: 1px solid grey;
+
+}
+#frame-form-pengiriman{
+    border: 1px solid grey;
+    padding: 25px;    
+}
+h3.label-data-pengiriman{
+    border: 1px solid grey;
+    padding: 10px 7px;
+    text-align: center;
+    margin: 0px;
 }

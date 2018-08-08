@@ -6,8 +6,7 @@
 	#mengambil data dari form register
 		$level = "customer";
 		$status="on";
-		$nama_depan = $_POST['namadepan'];
-		$nama_belakang = $_POST['namabelakang'];
+		$nama = $_POST['nama'];
 		$email = $_POST['email'];
 		$alamat = $_POST['alamat'];
 		$kota = $_POST['kota'];
@@ -28,7 +27,7 @@
 	$tabel = mysqli_query($koneksi, "SELECT * FROM user  WHERE email = '$email'");
 
 	#melakukan input dan pengecekan form 
-	if (empty($nama_depan) || empty($nama_belakang) || empty($email) ||
+	if (empty($nama) || empty($email) ||
  		empty($alamat) || empty($kota) || empty($provinsi) || empty($zip) || empty($jk) ||
  		empty($password) || empty($nomerhp)) {
 		header("location: ".BASE_URL."index.php?page=register&notif=require&$dataForm" );
@@ -39,8 +38,8 @@
 	}
 	else{
 		$passwordHash = md5($password);
-		$query = mysqli_query($koneksi,"INSERT INTO user (level , nama_depan , nama_belakang, email, alamat, kota, provinsi, zip, jk, phone, password, status ) 
-			VALUES('$level', '$nama_depan', '$nama_belakang', '$email', '$alamat', '$kota', '$provinsi', '$zip', '$jk','$nomerhp', '$passwordHash', '$status')");
+		$query = mysqli_query($koneksi,"INSERT INTO user (level , nama, email, alamat, kota, provinsi, zip, jk, phone, password, status ) 
+			VALUES('$level', '$nama', '$email', '$alamat', '$kota', '$provinsi', '$zip', '$jk','$nomerhp', '$passwordHash', '$status')");
 
 
  	}

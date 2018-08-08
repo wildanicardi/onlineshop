@@ -1,6 +1,6 @@
 <?php
-    include("../../function/koneksi.php");
-    include("../../function/helper.php");
+    include_once("../../assets/function/koneksi.php");
+    include_once("../../assets/function/helper.php");
      
     $banner = $_POST['banner'];
     $link = $_POST['link'];
