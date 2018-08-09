@@ -3,13 +3,18 @@
 	include_once("../../assets/function/koneksi.php");
 	include_once("../../assets/function/helper.php");
 
-	$kategori_id = $_POST['kategori_id'];
-	$nama_barang = $_POST['nama_barang'];
-	$spesifikasi = $_POST['spesifikasi'];
-	$stok = $_POST['stok'];
-	$harga = $_POST['harga'];
-	$status = $_POST['status'];
-	$button = $_POST['button'];
+	admin_only("barang",$level);
+
+	$barang_id =isset($_GET['barang_id']) ? $_GET['barang_id'] : "" ;
+	$button =isset($_POST['button']) ? $_POST['button'] : $_GET['button'];
+
+
+	$kategori_id = isset($_POST['kategori_id']) ? $_POST['kategori_id'] : false;
+	$nama_barang =isset($_POST['nama_barang']) ? $_POST['nama_barang'] : false;
+	$spesifikasi = isset($_POST['spesifikasi']) ? $_POST['spesifikasi'] : false;
+	$stok = isset($_POST['stok']) ? $_POST['stok'] : false;
+	$harga = isset($_POST['harga']) ? $_POST['harga'] : false;
+	$status = isset($_POST['status']) ? $_POST['status'] : false;
 	$update_gambar = "";
 
 	#mengecek apakah gambar tidak kosong, jika benar maka akan melakukan proses upload
@@ -26,7 +31,6 @@
 		mysqli_query($koneksi, "INSERT INTO barang(nama_barang,kategori_id,spesifikasi,stok,gambar,harga, status)  								VALUES ('$nama_barang','$kategori_id','$spesifikasi','$stok','$nama_file','$harga','$status')");
 	}
 	elseif ($button == "update") {
-		$barang_id = $_GET['barang_id'];
 		#mengupdate data 
 		mysqli_query($koneksi, "UPDATE barang SET kategori_id='$kategori_id',
 												nama_barang='$nama_barang',
@@ -36,6 +40,9 @@
 												status='$status'
 												$update_gambar
 												 WHERE barang_id='$barang_id'");
+	}elseif ($button == "Delete") {
+		#mengdelete data 
+		mysqli_query($koneksi, "DELETE FROM barang WHERE barang_id='$barang_id'");
 	}
 	
 

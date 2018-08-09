@@ -1,6 +1,8 @@
 <?php
     include_once("../../assets/function/koneksi.php");
     include_once("../../assets/function/helper.php");
+
+    admin_only("banner",$level);
      
     $banner = $_POST['banner'];
     $link = $_POST['link'];

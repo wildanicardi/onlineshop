@@ -1,6 +1,8 @@
 <?php
     include_once("../../assets/function/koneksi.php");
-	include_once("../../assets/function/helper.php");   
+	include_once("../../assets/function/helper.php"); 
+
+	admin_only("kota",$level);  
      
     $kota = $_POST['kota'];
     $tarif = $_POST['tarif'];

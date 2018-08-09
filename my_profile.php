@@ -1,11 +1,13 @@
 <?php
-if (!$user_id) 
-{
-  header("location: ".BASE_URL."index.php?page=login");
-}
-    $module = isset($_GET['module']) ? $_GET['module'] : false;
-    $action = isset($_GET['action']) ? $_GET['action'] : false;
-    $mode = isset($_GET['mode']) ? $_GET['mode'] : false;
+    if (!$user_id) 
+    {
+      header("location: ".BASE_URL."index.php?page=login");
+    }
+        $module = isset($_GET['module']) ? $_GET['module'] : false;
+        $action = isset($_GET['action']) ? $_GET['action'] : false;
+        $mode = isset($_GET['mode']) ? $_GET['mode'] : false;
+
+       admin_only($module,$level);
 ?>
 
     <div id="menu-profile">

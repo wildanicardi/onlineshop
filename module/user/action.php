@@ -1,6 +1,8 @@
 <?php
     include_once("../../assets/function/koneksi.php");
 	include_once("../../assets/function/helper.php"); 
+
+	admin_only("user",$level);
      
     $user_id = $_GET['user_id'];
 	

@@ -1,3 +1,5 @@
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL."assets/css/style.css"; ?>" />
 <style type="text/css">
     body{
         color: #fff;

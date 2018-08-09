@@ -2,7 +2,7 @@
 	#proteksi agar tidak dapat masuk ke data pemesanan sebelum login
 	if ($user_id ==false) {
 		$_SESSION["proses_pesanan"] = true;
-		header("location:".BASE_URL."index.php?page=login");
+		header("location:".BASE_URL."login.html");
 		exit;
 	}
  ?>
